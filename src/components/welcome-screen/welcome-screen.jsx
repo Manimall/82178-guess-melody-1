@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import PropTypes from 'prop-types';
 
 export const WelcomeScreen = (props) => {
   const {time, errorCount} = props;
@@ -18,4 +19,9 @@ export const WelcomeScreen = (props) => {
       <p className="welcome__text">Удачи!</p>
     </section>
   );
+};
+
+WelcomeScreen.propTypes = {
+  time: PropTypes.number,
+  errorCount: PropTypes.number,
 };
